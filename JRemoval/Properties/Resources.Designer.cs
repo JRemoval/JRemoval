@@ -73,6 +73,26 @@ namespace JRemoval.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Placeholder_Image {
+            get {
+                object obj = ResourceManager.GetObject("Placeholder Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap System_Monitoring {
+            get {
+                object obj = ResourceManager.GetObject("System Monitoring", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tracking {
             get {
                 object obj = ResourceManager.GetObject("Tracking", resourceCulture);

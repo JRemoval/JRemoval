@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using ezPC;
+
 
 namespace JRemoval
 {
@@ -56,6 +58,11 @@ namespace JRemoval
             {
                 MessageBox.Show("An unknown error has occurred.");
             }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
