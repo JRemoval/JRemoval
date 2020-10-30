@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace JRemoval
 {
@@ -20,6 +22,40 @@ namespace JRemoval
         private void metroTile2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            label2.Text = "Current User: " +  userName;
+           
+
+      
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("control", "powercfg.cpl");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
+        
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("control", "sysdm.cpl");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
         }
     }
 }
