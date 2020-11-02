@@ -114,7 +114,7 @@ namespace JRemoval
         internal static class Program
         {
             [STAThread]
-            private static void Main()
+            private static void Main2()
             {
                 if (Environment.OSVersion.Version.Major >= 6)
                     SetProcessDPIAware();
