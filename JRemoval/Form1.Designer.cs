@@ -45,6 +45,7 @@
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -211,8 +212,9 @@
             // 
             // notifyIcon2
             // 
-            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, please charge it. JRemoval will now automat" +
-    "ically enable Battery Saver. You can disable this in \"Settings\".";
+            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, please charge it. You can disable these not" +
+    "ifications in \"Settings\". \r\nYou also can auto-enable battery saver when the comp" +
+    "uter drops to the percentage.";
             this.notifyIcon2.BalloonTipTitle = "JRemoval";
             this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
             this.notifyIcon2.Text = "JRemoval";
@@ -240,6 +242,10 @@
             this.lblBatteryPercent.TabIndex = 6;
             this.lblBatteryPercent.Text = "%00%";
             this.lblBatteryPercent.Click += new System.EventHandler(this.lblBatteryPercent_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // Form1
             // 
@@ -279,6 +285,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon2;
         private System.Windows.Forms.Label lblBatteryPercent;
         private System.Windows.Forms.Label label4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
