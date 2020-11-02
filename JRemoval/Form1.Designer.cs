@@ -37,16 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,6 +130,63 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background. If you would like to close it f" +
+    "ully please right click the icon on the tray and click \"Close\".";
+            this.notifyIcon1.BalloonTipTitle = "Still Running In Background";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "You can hide these notifications in \"Settings\".";
+            this.notifyIcon1.Visible = true;
+            // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, it is highly reccomended that you charge it" +
+    ". ";
+            this.notifyIcon2.BalloonTipTitle = "Battery Running Low";
+            this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
+            this.notifyIcon2.Text = "You can hide these notifications in \"Settings\".";
+            this.notifyIcon2.Visible = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(3, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Battery Percentage:";
+            // 
+            // lblBatteryPercent
+            // 
+            this.lblBatteryPercent.AutoSize = true;
+            this.lblBatteryPercent.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblBatteryPercent.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 126);
+            this.lblBatteryPercent.Name = "lblBatteryPercent";
+            this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
+            this.lblBatteryPercent.TabIndex = 6;
+            this.lblBatteryPercent.Text = "%00%";
+            this.lblBatteryPercent.Click += new System.EventHandler(this.lblBatteryPercent_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JRemoval.Properties.Resources.Close_Light;
+            this.pictureBox1.Location = new System.Drawing.Point(901, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
@@ -201,58 +260,13 @@
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background. If you would like to close it p" +
-    "lease right click the icon on the tray and click \"Close\".";
-            this.notifyIcon1.BalloonTipTitle = "JRemoval";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "JRemoval";
-            this.notifyIcon1.Visible = true;
-            // 
-            // notifyIcon2
-            // 
-            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, please charge it. You can disable these not" +
-    "ifications in \"Settings\". \r\nYou also can auto-enable battery saver when the comp" +
-    "uter drops to the percentage.";
-            this.notifyIcon2.BalloonTipTitle = "JRemoval";
-            this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
-            this.notifyIcon2.Text = "JRemoval";
-            this.notifyIcon2.Visible = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Battery Percentage:";
-            // 
-            // lblBatteryPercent
-            // 
-            this.lblBatteryPercent.AutoSize = true;
-            this.lblBatteryPercent.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F, System.Drawing.FontStyle.Bold);
-            this.lblBatteryPercent.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 126);
-            this.lblBatteryPercent.Name = "lblBatteryPercent";
-            this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
-            this.lblBatteryPercent.TabIndex = 6;
-            this.lblBatteryPercent.Text = "%00%";
-            this.lblBatteryPercent.Click += new System.EventHandler(this.lblBatteryPercent_Click);
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(964, 641);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile2);
@@ -264,6 +278,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,6 +301,7 @@
         private System.Windows.Forms.Label lblBatteryPercent;
         private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -31,7 +31,7 @@ namespace JRemoval
 
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
-            if (lblBatteryPercent.Text.Contains("30"))
+            if (lblBatteryPercent.Text.Contains("100"))
             {
                 notifyIcon2.ShowBalloonTip(1000);
             }
@@ -90,10 +90,12 @@ namespace JRemoval
 
             }
         }
-        
 
-
-
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            //notifyIcon1.ShowBalloonTip(1000);
+            //This will make it so it will hide to tray. Obviously since people do not want it to ALWAYS hide, it can be changed via Settings, which is still a WIP.
+        }
     }
 }

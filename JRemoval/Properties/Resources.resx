@@ -118,16 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Cleanup Broom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cleanup Broom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="System Monitoring" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\System Monitoring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cleanup Broom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cleanup Broom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Placeholder Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Placeholder Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Placeholder Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Placeholder Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
