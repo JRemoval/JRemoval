@@ -132,8 +132,7 @@
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background. If you would like to close it f" +
-    "ully please right click the icon on the tray and click \"Close\".";
+            this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background.";
             this.notifyIcon1.BalloonTipTitle = "Still Running In Background";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "You can hide these notifications in \"Settings\".";
@@ -142,7 +141,7 @@
             // notifyIcon2
             // 
             this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, it is highly reccomended that you charge it" +
+            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, it is highly recommended that you charge it" +
     ". ";
             this.notifyIcon2.BalloonTipTitle = "Battery Running Low";
             this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
