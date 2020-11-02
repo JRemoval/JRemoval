@@ -43,12 +43,16 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.lblBatteryPercent);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.metroButton2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.metroButton1);
@@ -207,8 +211,34 @@
             // 
             // notifyIcon2
             // 
-            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.BalloonTipText = "Your computer battery is running low, please charge it. JRemoval will now automat" +
+    "ically enable Battery Saver. You can disable this in \"Settings\".";
+            this.notifyIcon2.BalloonTipTitle = "JRemoval";
+            this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
+            this.notifyIcon2.Text = "JRemoval";
             this.notifyIcon2.Visible = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(3, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Battery Percentage:";
+            // 
+            // lblBatteryPercent
+            // 
+            this.lblBatteryPercent.AutoSize = true;
+            this.lblBatteryPercent.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lblBatteryPercent.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 126);
+            this.lblBatteryPercent.Name = "lblBatteryPercent";
+            this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
+            this.lblBatteryPercent.TabIndex = 6;
+            this.lblBatteryPercent.Text = "%00%";
             // 
             // Form1
             // 
@@ -246,6 +276,8 @@
         private MetroFramework.Controls.MetroTile metroTile4;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.NotifyIcon notifyIcon2;
+        private System.Windows.Forms.Label lblBatteryPercent;
+        private System.Windows.Forms.Label label4;
     }
 }
 

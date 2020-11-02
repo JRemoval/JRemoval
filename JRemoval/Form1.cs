@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using ezPC;
+using System.Management;
 
 
 namespace JRemoval
@@ -19,6 +20,8 @@ namespace JRemoval
         public Form1()
         {
             InitializeComponent();
+            PowerStatus status = SystemInformation.PowerStatus;
+            lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
@@ -30,11 +33,20 @@ namespace JRemoval
         {
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             label2.Text = "Current User: " +  userName;
-            notifyIcon1.ShowBalloonTip(1000);
-           
-           
+            
 
-      
+
+            
+
+
+
+            if (lblBatteryPercent.Text == "30%")
+            {
+                notifyIcon2.ShowBalloonTip(1000);
+             
+            }
+
+
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
