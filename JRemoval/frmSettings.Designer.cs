@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,14 +61,13 @@
             // metroRadioButton1
             // 
             this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Checked = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(88, 170);
+            this.metroRadioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.metroRadioButton1.Location = new System.Drawing.Point(28, 149);
             this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(85, 15);
+            this.metroRadioButton1.Size = new System.Drawing.Size(40, 15);
             this.metroRadioButton1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroRadioButton1.TabIndex = 4;
-            this.metroRadioButton1.TabStop = true;
-            this.metroRadioButton1.Text = "Hide to tray";
+            this.metroRadioButton1.Text = "Yes";
             this.metroRadioButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroRadioButton1.UseSelectable = true;
             this.metroRadioButton1.CheckedChanged += new System.EventHandler(this.metroRadioButton1_CheckedChanged);
@@ -75,14 +75,25 @@
             // metroRadioButton2
             // 
             this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(88, 191);
+            this.metroRadioButton2.Location = new System.Drawing.Point(28, 170);
             this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(37, 15);
+            this.metroRadioButton2.Size = new System.Drawing.Size(39, 15);
             this.metroRadioButton2.TabIndex = 5;
-            this.metroRadioButton2.Text = "no";
+            this.metroRadioButton2.Text = "No";
             this.metroRadioButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroRadioButton2.UseSelectable = true;
             this.metroRadioButton2.CheckedChanged += new System.EventHandler(this.metroRadioButton2_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12.25F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(13, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(583, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Do you want JRemoval to hide in the tray when the application closes?";
             // 
             // frmSettings
             // 
@@ -90,6 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(858, 559);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.metroRadioButton2);
             this.Controls.Add(this.metroRadioButton1);
             this.Controls.Add(this.pictureBox1);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
+        private System.Windows.Forms.Label label2;
     }
 }

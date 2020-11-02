@@ -58,5 +58,17 @@ namespace JRemoval.Properties {
                 this["ShowNotifications"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DoNotShowBatteryLow {
+            get {
+                return ((bool)(this["DoNotShowBatteryLow"]));
+            }
+            set {
+                this["DoNotShowBatteryLow"] = value;
+            }
+        }
     }
 }

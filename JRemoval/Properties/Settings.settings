@@ -11,5 +11,8 @@
     <Setting Name="ShowNotifications" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
+    <Setting Name="DoNotShowBatteryLow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
