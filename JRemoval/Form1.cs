@@ -20,13 +20,10 @@ namespace JRemoval
         public Form1()
         {
             InitializeComponent();
-           
-        }
-
-        private void metroTile2_Click(object sender, EventArgs e)
-        {
             
         }
+
+    
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,19 +33,28 @@ namespace JRemoval
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
 
+      
 
 
-
-
-            if ("lblBatteryPercent".Contains("97%"))
-            {
-                notifyIcon2.ShowBalloonTip(1000);
-             
-            }
 
 
         }
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            var CleanPC = new frmCleanupComputer();
+            CleanPC.Show();
+        }
 
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        // Sidebar Runs Start
         private void metroButton1_Click(object sender, EventArgs e)
         {
             try
@@ -74,12 +80,14 @@ namespace JRemoval
             }
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void lblBatteryPercent_Click(object sender, EventArgs e)
         {
-            var CleanPC = new frmCleanupComputer();
-            CleanPC.Show();
-        }
 
-      
+        }
+        // Sidebar Runs End
+
+
+
+
     }
 }

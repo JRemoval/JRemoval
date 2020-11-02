@@ -239,6 +239,7 @@
             this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
             this.lblBatteryPercent.TabIndex = 6;
             this.lblBatteryPercent.Text = "%00%";
+            this.lblBatteryPercent.Click += new System.EventHandler(this.lblBatteryPercent_Click);
             // 
             // Form1
             // 

@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -39,9 +40,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 25);
+            this.label1.Size = new System.Drawing.Size(177, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cleanup Computer Options";
+            this.label1.Text = "Cleanup Computer";
             // 
             // button1
             // 
@@ -61,11 +62,23 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.DarkRed;
+            this.button2.Location = new System.Drawing.Point(331, 506);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 34);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Clear Recycle Bin";
+            this.metroToolTip1.SetToolTip(this.button2, "This cleans all temp folders and prefetch.");
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmCleanupComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 552);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -82,5 +95,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private System.Windows.Forms.Button button2;
     }
 }
