@@ -11,7 +11,7 @@ using System.IO;
 using System.Diagnostics;
 using ezPC;
 using System.Management;
-
+using JRemoval.Properties;
 
 namespace JRemoval
 {
@@ -21,9 +21,6 @@ namespace JRemoval
         {
             InitializeComponent();
         }
-
-    
-
         private void Form1_Load(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
@@ -31,14 +28,10 @@ namespace JRemoval
 
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
-            if (lblBatteryPercent.Text.Contains("100"))
+            if (lblBatteryPercent.Text.Contains("30"))
             {
                 notifyIcon2.ShowBalloonTip(1000);
             }
-
-
-
-
         }
         private void metroTile1_Click(object sender, EventArgs e)
         {
@@ -61,9 +54,7 @@ namespace JRemoval
             {
                 MessageBox.Show("An unknown error has occurred.");
             }
-        
         }
-
         private void metroButton2_Click(object sender, EventArgs e)
         {
             try
@@ -75,27 +66,44 @@ namespace JRemoval
                 MessageBox.Show("An unknown error has occurred.");
             }
         }
-
         private void lblBatteryPercent_Click(object sender, EventArgs e)
         {
         }
-
         // Sidebar Runs End
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+    
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-            if (lblBatteryPercent.Text.Contains("30"))
-            {
-                notifyIcon2.ShowBalloonTip(1000);
-
-            }
+            var Settings = new frmSettings();
+            Settings.Show();
         }
 
+            //Code to hide to tray start
         private void pictureBox1_Click(object sender, EventArgs e)
+        {         
+            if (Properties.Settings.Default.RunInBackground == true)
+            {
+            notifyIcon1.ShowBalloonTip(1000);
+             this.Visible = false;
+            }
+            else
+            {
+             this.Close();
+            }
+            //This will make it so it will hide to tray. Obviously since people do not want it to ALWAYS hide, it can be changed via Settings
+        }
+
+    
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            //notifyIcon1.ShowBalloonTip(1000);
-            //This will make it so it will hide to tray. Obviously since people do not want it to ALWAYS hide, it can be changed via Settings, which is still a WIP.
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = true;
+        }
+        //Code to hide to tray end
     }
 }

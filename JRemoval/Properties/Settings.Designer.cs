@@ -25,10 +25,10 @@ namespace JRemoval.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("true")]
-        public string RunInBackground {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RunInBackground {
             get {
-                return ((string)(this["RunInBackground"]));
+                return ((bool)(this["RunInBackground"]));
             }
             set {
                 this["RunInBackground"] = value;

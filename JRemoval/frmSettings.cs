@@ -16,5 +16,20 @@ namespace JRemoval
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void metroRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.RunInBackground = true;
+        }
+
+        private void metroRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.RunInBackground = false;
+        }
     }
 }
