@@ -50,6 +50,7 @@
             this.tileRemoveTelemetry = new MetroFramework.Controls.MetroTile();
             this.tileCleanupComputer = new MetroFramework.Controls.MetroTile();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblBatteryPercent);
             this.panel1.Controls.Add(this.label4);
@@ -155,7 +157,7 @@
             // 
             // metroToolTip1
             // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Default;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -225,7 +227,7 @@
             this.tilePlaceholder.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tilePlaceholder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.tilePlaceholder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroToolTip1.SetToolTip(this.tilePlaceholder, "System Status");
+            this.metroToolTip1.SetToolTip(this.tilePlaceholder, "Placeholder");
             this.tilePlaceholder.UseSelectable = true;
             this.tilePlaceholder.UseTileImage = true;
             // 
@@ -294,8 +296,21 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            this.metroToolTip1.SetToolTip(this.pictureBox2, "Settings (Placeholder Icon)");
+            this.metroToolTip1.SetToolTip(this.pictureBox2, "Settings");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(3, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Signed In With Developer Mode";
+            this.metroToolTip1.SetToolTip(this.label5, "My Computer at a Glance");
+            this.label5.Visible = false;
             // 
             // Form1
             // 
@@ -344,6 +359,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
     }
 }
 

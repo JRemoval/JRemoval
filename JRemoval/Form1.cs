@@ -12,6 +12,7 @@ using System.Diagnostics;
 using ezPC;
 using System.Management;
 using JRemoval.Properties;
+using Microsoft.Win32;
 
 namespace JRemoval
 {
@@ -24,7 +25,9 @@ namespace JRemoval
         private void Form1_Load(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
-            label2.Text = "User Signed In: " +  userName;
+            label2.Text = "User Signed In: " + userName;
+
+         
 
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
@@ -70,7 +73,7 @@ namespace JRemoval
         {
         }
         // Sidebar Runs End
-    
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -78,22 +81,22 @@ namespace JRemoval
             Settings.Show();
         }
 
-            //Code to hide to tray start
+        //Code to hide to tray start
         private void pictureBox1_Click(object sender, EventArgs e)
-        {         
+        {
             if (Properties.Settings.Default.RunInBackground == true)
             {
-            notifyIcon1.ShowBalloonTip(1000);
-             this.Visible = false;
+                notifyIcon1.ShowBalloonTip(1000);
+                this.Visible = false;
             }
             else
             {
-             this.Close();
+                this.Close();
             }
             //This will make it so it will hide to tray. Obviously since people do not want it to ALWAYS hide, it can be changed via Settings
         }
 
-    
+
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -105,5 +108,13 @@ namespace JRemoval
             this.Visible = true;
         }
         //Code to hide to tray end
+
+
+
+
+        //Experimental Registry Key Stuff
+
     }
+
+
 }

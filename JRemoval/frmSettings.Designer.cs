@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +47,6 @@
             this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Settings";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JRemoval.Properties.Resources.Close_Light;
-            this.pictureBox1.Location = new System.Drawing.Point(797, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // metroRadioButton1
             // 
@@ -95,12 +85,35 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Do you want JRemoval to hide in the tray when the application closes?";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JRemoval.Properties.Resources.Close_Light;
+            this.pictureBox1.Location = new System.Drawing.Point(797, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(2, 522);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(240, 38);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "The icons in JRemoval are from icons8.\r\nhttps://icons8.com/";
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(858, 559);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.metroRadioButton2);
             this.Controls.Add(this.metroRadioButton1);
@@ -122,5 +135,6 @@
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
