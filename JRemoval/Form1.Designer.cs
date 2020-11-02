@@ -189,7 +189,7 @@
             // tilePlaceholder
             // 
             this.tilePlaceholder.ActiveControl = null;
-            this.tilePlaceholder.Location = new System.Drawing.Point(553, 373);
+            this.tilePlaceholder.Location = new System.Drawing.Point(595, 373);
             this.tilePlaceholder.Name = "tilePlaceholder";
             this.tilePlaceholder.Size = new System.Drawing.Size(234, 240);
             this.tilePlaceholder.Style = MetroFramework.MetroColorStyle.Silver;
@@ -207,7 +207,7 @@
             // tileSystemStatus
             // 
             this.tileSystemStatus.ActiveControl = null;
-            this.tileSystemStatus.Location = new System.Drawing.Point(255, 373);
+            this.tileSystemStatus.Location = new System.Drawing.Point(273, 373);
             this.tileSystemStatus.Name = "tileSystemStatus";
             this.tileSystemStatus.Size = new System.Drawing.Size(234, 240);
             this.tileSystemStatus.Style = MetroFramework.MetroColorStyle.Silver;
@@ -225,7 +225,7 @@
             // tileRemoveTelemetry
             // 
             this.tileRemoveTelemetry.ActiveControl = null;
-            this.tileRemoveTelemetry.Location = new System.Drawing.Point(553, 29);
+            this.tileRemoveTelemetry.Location = new System.Drawing.Point(595, 29);
             this.tileRemoveTelemetry.Name = "tileRemoveTelemetry";
             this.tileRemoveTelemetry.Size = new System.Drawing.Size(234, 240);
             this.tileRemoveTelemetry.Style = MetroFramework.MetroColorStyle.Silver;
@@ -243,7 +243,7 @@
             // tileCleanupComputer
             // 
             this.tileCleanupComputer.ActiveControl = null;
-            this.tileCleanupComputer.Location = new System.Drawing.Point(255, 29);
+            this.tileCleanupComputer.Location = new System.Drawing.Point(273, 29);
             this.tileCleanupComputer.Name = "tileCleanupComputer";
             this.tileCleanupComputer.Size = new System.Drawing.Size(234, 240);
             this.tileCleanupComputer.Style = MetroFramework.MetroColorStyle.Silver;

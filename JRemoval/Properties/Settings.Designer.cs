@@ -46,5 +46,17 @@ namespace JRemoval.Properties {
                 this["AutoBatterySave"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public string ShowNotifications {
+            get {
+                return ((string)(this["ShowNotifications"]));
+            }
+            set {
+                this["ShowNotifications"] = value;
+            }
+        }
     }
 }

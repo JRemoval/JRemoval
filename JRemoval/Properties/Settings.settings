@@ -8,5 +8,8 @@
     <Setting Name="AutoBatterySave" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
+    <Setting Name="ShowNotifications" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
