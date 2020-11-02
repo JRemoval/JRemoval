@@ -20,8 +20,7 @@ namespace JRemoval
         public Form1()
         {
             InitializeComponent();
-            PowerStatus status = SystemInformation.PowerStatus;
-            lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
+           
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
@@ -33,14 +32,15 @@ namespace JRemoval
         {
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             label2.Text = "Current User: " +  userName;
-            
+
+            PowerStatus status = SystemInformation.PowerStatus;
+            lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
 
 
-            
 
 
 
-            if (lblBatteryPercent.Text == "30%")
+            if ("lblBatteryPercent".Contains("97%"))
             {
                 notifyIcon2.ShowBalloonTip(1000);
              
@@ -79,5 +79,7 @@ namespace JRemoval
             var CleanPC = new frmCleanupComputer();
             CleanPC.Show();
         }
+
+      
     }
 }
