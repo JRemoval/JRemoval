@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnChangePCName = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnPowerPlans = new MetroFramework.Controls.MetroButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
@@ -43,10 +43,10 @@
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.tilePlaceholder = new MetroFramework.Controls.MetroTile();
+            this.tileSystemStatus = new MetroFramework.Controls.MetroTile();
+            this.tileRemoveTelemetry = new MetroFramework.Controls.MetroTile();
+            this.tileCleanupComputer = new MetroFramework.Controls.MetroTile();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +56,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel1.Controls.Add(this.lblBatteryPercent);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.metroButton2);
+            this.panel1.Controls.Add(this.btnChangePCName);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.metroButton1);
+            this.panel1.Controls.Add(this.btnPowerPlans);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -66,17 +66,17 @@
             this.panel1.Size = new System.Drawing.Size(230, 643);
             this.panel1.TabIndex = 0;
             // 
-            // metroButton2
+            // btnChangePCName
             // 
-            this.metroButton2.Location = new System.Drawing.Point(113, 617);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(108, 23);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Change PC Name";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.metroButton2, "Change PC Name");
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.btnChangePCName.Location = new System.Drawing.Point(113, 617);
+            this.btnChangePCName.Name = "btnChangePCName";
+            this.btnChangePCName.Size = new System.Drawing.Size(108, 23);
+            this.btnChangePCName.TabIndex = 4;
+            this.btnChangePCName.Text = "Change PC Name";
+            this.btnChangePCName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.btnChangePCName, "Change PC Name");
+            this.btnChangePCName.UseSelectable = true;
+            this.btnChangePCName.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // label3
             // 
@@ -89,17 +89,17 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Power Plans";
             // 
-            // metroButton1
+            // btnPowerPlans
             // 
-            this.metroButton1.Location = new System.Drawing.Point(146, 529);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Go";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.metroButton1, "Go to Power Configuration");
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btnPowerPlans.Location = new System.Drawing.Point(146, 529);
+            this.btnPowerPlans.Name = "btnPowerPlans";
+            this.btnPowerPlans.Size = new System.Drawing.Size(75, 23);
+            this.btnPowerPlans.TabIndex = 2;
+            this.btnPowerPlans.Text = "Go";
+            this.btnPowerPlans.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.btnPowerPlans, "Go to Power Configuration");
+            this.btnPowerPlans.UseSelectable = true;
+            this.btnPowerPlans.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // label2
             // 
@@ -186,78 +186,78 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // metroTile4
+            // tilePlaceholder
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(553, 373);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(234, 240);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTile4.TabIndex = 8;
-            this.metroTile4.Text = "Placeholder";
-            this.metroTile4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile4.TileImage = global::JRemoval.Properties.Resources.Placeholder_Image;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroToolTip1.SetToolTip(this.metroTile4, "System Status");
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseTileImage = true;
+            this.tilePlaceholder.ActiveControl = null;
+            this.tilePlaceholder.Location = new System.Drawing.Point(553, 373);
+            this.tilePlaceholder.Name = "tilePlaceholder";
+            this.tilePlaceholder.Size = new System.Drawing.Size(234, 240);
+            this.tilePlaceholder.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tilePlaceholder.TabIndex = 8;
+            this.tilePlaceholder.Text = "Placeholder";
+            this.tilePlaceholder.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tilePlaceholder.TileImage = global::JRemoval.Properties.Resources.Placeholder_Image;
+            this.tilePlaceholder.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tilePlaceholder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tilePlaceholder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroToolTip1.SetToolTip(this.tilePlaceholder, "System Status");
+            this.tilePlaceholder.UseSelectable = true;
+            this.tilePlaceholder.UseTileImage = true;
             // 
-            // metroTile3
+            // tileSystemStatus
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(255, 373);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(234, 240);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTile3.TabIndex = 7;
-            this.metroTile3.Text = "System Status";
-            this.metroTile3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile3.TileImage = global::JRemoval.Properties.Resources.System_Monitoring;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroToolTip1.SetToolTip(this.metroTile3, "System Status");
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
+            this.tileSystemStatus.ActiveControl = null;
+            this.tileSystemStatus.Location = new System.Drawing.Point(255, 373);
+            this.tileSystemStatus.Name = "tileSystemStatus";
+            this.tileSystemStatus.Size = new System.Drawing.Size(234, 240);
+            this.tileSystemStatus.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tileSystemStatus.TabIndex = 7;
+            this.tileSystemStatus.Text = "System Status";
+            this.tileSystemStatus.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileSystemStatus.TileImage = global::JRemoval.Properties.Resources.System_Monitoring;
+            this.tileSystemStatus.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileSystemStatus.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileSystemStatus.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroToolTip1.SetToolTip(this.tileSystemStatus, "System Status");
+            this.tileSystemStatus.UseSelectable = true;
+            this.tileSystemStatus.UseTileImage = true;
             // 
-            // metroTile2
+            // tileRemoveTelemetry
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(553, 29);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(234, 240);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTile2.TabIndex = 6;
-            this.metroTile2.Text = "Remove Telemetry";
-            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile2.TileImage = global::JRemoval.Properties.Resources.Tracking;
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroToolTip1.SetToolTip(this.metroTile2, "Remove Telemetry");
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
+            this.tileRemoveTelemetry.ActiveControl = null;
+            this.tileRemoveTelemetry.Location = new System.Drawing.Point(553, 29);
+            this.tileRemoveTelemetry.Name = "tileRemoveTelemetry";
+            this.tileRemoveTelemetry.Size = new System.Drawing.Size(234, 240);
+            this.tileRemoveTelemetry.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tileRemoveTelemetry.TabIndex = 6;
+            this.tileRemoveTelemetry.Text = "Remove Telemetry";
+            this.tileRemoveTelemetry.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileRemoveTelemetry.TileImage = global::JRemoval.Properties.Resources.Tracking;
+            this.tileRemoveTelemetry.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileRemoveTelemetry.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileRemoveTelemetry.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroToolTip1.SetToolTip(this.tileRemoveTelemetry, "Remove Telemetry");
+            this.tileRemoveTelemetry.UseSelectable = true;
+            this.tileRemoveTelemetry.UseTileImage = true;
             // 
-            // metroTile1
+            // tileCleanupComputer
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(255, 29);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(234, 240);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTile1.TabIndex = 5;
-            this.metroTile1.Text = "Cleanup Computer";
-            this.metroTile1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTile1.TileImage = global::JRemoval.Properties.Resources.Cleanup_Broom;
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroToolTip1.SetToolTip(this.metroTile1, "Cleanup Computer");
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.tileCleanupComputer.ActiveControl = null;
+            this.tileCleanupComputer.Location = new System.Drawing.Point(255, 29);
+            this.tileCleanupComputer.Name = "tileCleanupComputer";
+            this.tileCleanupComputer.Size = new System.Drawing.Size(234, 240);
+            this.tileCleanupComputer.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tileCleanupComputer.TabIndex = 5;
+            this.tileCleanupComputer.Text = "Cleanup Computer";
+            this.tileCleanupComputer.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileCleanupComputer.TileImage = global::JRemoval.Properties.Resources.Cleanup_Broom;
+            this.tileCleanupComputer.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileCleanupComputer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileCleanupComputer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroToolTip1.SetToolTip(this.tileCleanupComputer, "Cleanup Computer");
+            this.tileCleanupComputer.UseSelectable = true;
+            this.tileCleanupComputer.UseTileImage = true;
+            this.tileCleanupComputer.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // Form1
             // 
@@ -266,10 +266,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(964, 641);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile3);
-            this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.tilePlaceholder);
+            this.Controls.Add(this.tileSystemStatus);
+            this.Controls.Add(this.tileRemoveTelemetry);
+            this.Controls.Add(this.tileCleanupComputer);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -287,14 +287,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnPowerPlans;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnChangePCName;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile tileCleanupComputer;
+        private MetroFramework.Controls.MetroTile tileRemoveTelemetry;
+        private MetroFramework.Controls.MetroTile tileSystemStatus;
+        private MetroFramework.Controls.MetroTile tilePlaceholder;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.NotifyIcon notifyIcon2;
         private System.Windows.Forms.Label lblBatteryPercent;

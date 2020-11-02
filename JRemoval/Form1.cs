@@ -27,7 +27,7 @@ namespace JRemoval
         private void Form1_Load(object sender, EventArgs e)
         {
             string userName = Environment.UserName;
-            label2.Text = "Current User: " +  userName;
+            label2.Text = "User Signed In: " +  userName;
 
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
