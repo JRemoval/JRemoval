@@ -26,9 +26,6 @@ namespace JRemoval
         {
             string userName = Environment.UserName;
             label2.Text = "User Signed In: " + userName;
-
-         
-
             PowerStatus status = SystemInformation.PowerStatus;
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
             if (lblBatteryPercent.Text.Contains("30"))
