@@ -13,6 +13,7 @@ using ezPC;
 using System.Management;
 using JRemoval.Properties;
 using Microsoft.Win32;
+using System.Runtime.InteropServices;
 
 namespace JRemoval
 {
@@ -109,7 +110,24 @@ namespace JRemoval
 
 
 
-        //Experimental Registry Key Stuff
+                             // Thank you wpf man
+        internal static class Program
+        {
+            [STAThread]
+            private static void Main()
+            {
+                if (Environment.OSVersion.Version.Major >= 6)
+                    SetProcessDPIAware();
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
+
+            [DllImport("user32.dll", SetLastError = true)]
+            private static extern bool SetProcessDPIAware();
+        }
+                              // Thank you wpf man
 
     }
 
