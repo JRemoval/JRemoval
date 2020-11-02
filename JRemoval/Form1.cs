@@ -23,13 +23,15 @@ namespace JRemoval
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             label2.Text = "Current User: " +  userName;
+            notifyIcon1.ShowBalloonTip(1000);
+           
            
 
       
@@ -62,7 +64,8 @@ namespace JRemoval
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-
+            var CleanPC = new frmCleanupComputer();
+            CleanPC.Show();
         }
     }
 }

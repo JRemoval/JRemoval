@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +41,8 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,6 +196,20 @@
             this.metroTile1.UseTileImage = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background. If you would like to close it p" +
+    "lease right click the icon on the tray and click \"Close\".";
+            this.notifyIcon1.BalloonTipTitle = "JRemoval";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "JRemoval";
+            this.notifyIcon1.Visible = true;
+            // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +244,8 @@
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile4;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.NotifyIcon notifyIcon2;
     }
 }
 
