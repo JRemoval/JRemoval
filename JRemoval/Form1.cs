@@ -99,15 +99,11 @@ namespace JRemoval
 
 
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quitJRemovalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Visible = true;
-        }
         //Code to hide to tray end
 
 
@@ -130,7 +126,9 @@ namespace JRemoval
             [DllImport("user32.dll", SetLastError = true)]
             private static extern bool SetProcessDPIAware();
         }
-                              // Thank you wpf man
+
+      
+                    // Thank you wpf man
 
     }
 
