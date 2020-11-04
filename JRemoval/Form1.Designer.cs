@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblBatteryPercent);
             this.panel1.Controls.Add(this.label4);
@@ -71,21 +69,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 643);
+            this.panel1.Size = new System.Drawing.Size(238, 643);
             this.panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(3, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 19);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Signed In With Developer Mode";
-            this.metroToolTip1.SetToolTip(this.label5, "My Computer at a Glance");
-            this.label5.Visible = false;
             // 
             // pictureBox2
             // 
@@ -231,7 +216,7 @@
             this.tileRemoveTelemetry.Size = new System.Drawing.Size(234, 240);
             this.tileRemoveTelemetry.Style = MetroFramework.MetroColorStyle.Silver;
             this.tileRemoveTelemetry.TabIndex = 6;
-            this.tileRemoveTelemetry.Text = "Remove Telemetry";
+            this.tileRemoveTelemetry.Text = "Remove Telemetry [WIP]";
             this.tileRemoveTelemetry.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tileRemoveTelemetry.TileImage = global::JRemoval.Properties.Resources.Tracking;
             this.tileRemoveTelemetry.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,7 +342,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
     }
 }
 

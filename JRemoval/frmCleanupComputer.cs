@@ -86,5 +86,15 @@ namespace JRemoval
         {
             CleanTemporaryFolders();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
