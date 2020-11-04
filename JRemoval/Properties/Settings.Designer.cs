@@ -70,5 +70,17 @@ namespace JRemoval.Properties {
                 this["DoNotShowBatteryLow"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.1.0")]
+        public string ver {
+            get {
+                return ((string)(this["ver"]));
+            }
+            set {
+                this["ver"] = value;
+            }
+        }
     }
 }

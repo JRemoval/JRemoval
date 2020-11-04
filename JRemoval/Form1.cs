@@ -31,6 +31,8 @@ namespace JRemoval
             lblBatteryPercent.Text = status.BatteryLifePercent.ToString("P0");
             if (lblBatteryPercent.Text.Contains("30"))
             {
+                notifyIcon2.Visible = true;
+
                 notifyIcon2.ShowBalloonTip(1000);
             }
         }
@@ -84,6 +86,7 @@ namespace JRemoval
         {
             if (Properties.Settings.Default.RunInBackground == true)
             {
+                notifyIcon1.Visible = true;
                 notifyIcon1.ShowBalloonTip(1000);
                 this.Visible = false;
             }

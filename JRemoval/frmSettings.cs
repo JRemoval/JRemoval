@@ -25,11 +25,17 @@ namespace JRemoval
         private void metroRadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.RunInBackground = true;
+
         }
 
         private void metroRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.RunInBackground = false;
+        }
+
+        private void frmSettings_Load(object sender, EventArgs e)
+        {
+            label3.Text = Properties.Settings.Default.ver;
         }
     }
 }

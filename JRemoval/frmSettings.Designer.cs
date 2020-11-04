@@ -99,13 +99,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(2, 522);
+            this.label3.Location = new System.Drawing.Point(12, 533);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 38);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "The icons in JRemoval are from icons8.\r\nhttps://icons8.com/";
+            this.label3.Text = "%ver_string%";
             // 
             // frmSettings
             // 
@@ -122,6 +122,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSettings";
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.frmSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

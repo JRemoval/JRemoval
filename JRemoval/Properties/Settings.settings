@@ -14,5 +14,8 @@
     <Setting Name="DoNotShowBatteryLow" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="ver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">v0.1.0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
