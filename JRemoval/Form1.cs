@@ -32,10 +32,20 @@ namespace JRemoval
             if (lblBatteryPercent.Text.Contains("30"))
             {
                 notifyIcon2.Visible = true;
-
                 notifyIcon2.ShowBalloonTip(1000);
             }
+
+            // List all disk space
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                Console.WriteLine(d.AvailableFreeSpace);
+               
+                label5.Text = "Free Space on C: " + d.AvailableFreeSpace.ToString("N") + "B";
+            }
         }
+
         private void metroTile1_Click(object sender, EventArgs e)
         {
             var CleanPC = new frmCleanupComputer();
@@ -75,6 +85,31 @@ namespace JRemoval
                 MessageBox.Show("An unknown error has occurred.");
             }
         }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("cleanmgr");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("dfrgui");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
+        }
+
         private void lblBatteryPercent_Click(object sender, EventArgs e)
         {
         }
@@ -102,19 +137,12 @@ namespace JRemoval
             }
             //This will make it so it will hide to tray. Obviously since people do not want it to ALWAYS hide, it can be changed via Settings
         }
-
-
-
         private void quitJRemovalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //Code to hide to tray end
-
-
-
-
                              // Thank you wpf man
         internal static class Program
         {
@@ -132,9 +160,7 @@ namespace JRemoval
             [DllImport("user32.dll", SetLastError = true)]
             private static extern bool SetProcessDPIAware();
         }
-
-      
-
+    
         // Thank you wpf man
 
     }

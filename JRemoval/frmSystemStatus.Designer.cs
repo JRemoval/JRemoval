@@ -55,7 +55,8 @@
             this.label2.Size = new System.Drawing.Size(233, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Base Operating System Installed: 0.0";
-            this.metroToolTip1.SetToolTip(this.label2, "If you are confused, this is the Version Number (os) Windows was installed with.");
+            this.metroToolTip1.SetToolTip(this.label2, "This is NOT what OS you are currently running. This is the OS that was pre-instal" +
+        "led.");
             // 
             // btnChangePCName
             // 
