@@ -73,7 +73,7 @@ namespace JRemoval.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.1.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("v0.1.1")]
         public string ver {
             get {
                 return ((string)(this["ver"]));

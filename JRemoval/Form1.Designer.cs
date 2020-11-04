@@ -46,10 +46,11 @@
             this.tileCleanupComputer = new MetroFramework.Controls.MetroTile();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -90,7 +91,7 @@
             this.lblBatteryPercent.AutoSize = true;
             this.lblBatteryPercent.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblBatteryPercent.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 126);
+            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 494);
             this.lblBatteryPercent.Name = "lblBatteryPercent";
             this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
             this.lblBatteryPercent.TabIndex = 6;
@@ -102,7 +103,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 125);
+            this.label4.Location = new System.Drawing.Point(3, 493);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 5;
@@ -110,7 +111,7 @@
             // 
             // btnChangePCName
             // 
-            this.btnChangePCName.Location = new System.Drawing.Point(119, 617);
+            this.btnChangePCName.Location = new System.Drawing.Point(127, 617);
             this.btnChangePCName.Name = "btnChangePCName";
             this.btnChangePCName.Size = new System.Drawing.Size(108, 23);
             this.btnChangePCName.TabIndex = 4;
@@ -125,7 +126,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(12, 529);
+            this.label3.Location = new System.Drawing.Point(3, 546);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 3;
@@ -133,7 +134,7 @@
             // 
             // btnPowerPlans
             // 
-            this.btnPowerPlans.Location = new System.Drawing.Point(146, 529);
+            this.btnPowerPlans.Location = new System.Drawing.Point(143, 546);
             this.btnPowerPlans.Name = "btnPowerPlans";
             this.btnPowerPlans.Size = new System.Drawing.Size(75, 23);
             this.btnPowerPlans.TabIndex = 2;
@@ -146,25 +147,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(4, 29);
+            this.label2.Location = new System.Drawing.Point(12, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 16);
+            this.label2.Size = new System.Drawing.Size(183, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "User Singed In: %username%";
+            this.metroToolTip1.SetToolTip(this.label2, "\r\n");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.Size = new System.Drawing.Size(178, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "My Computer at a glance...";
-            this.metroToolTip1.SetToolTip(this.label1, "My Computer at a Glance");
+            this.label1.Text = "My Computer at a glance";
             // 
             // metroToolTip1
             // 
@@ -256,23 +257,17 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
+            this.checkForUpdatesToolStripMenuItem,
+            this.toolStripSeparator1,
             this.closeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 48);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(174, 54);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.closeToolStripMenuItem.Text = "Quit JRemoval";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // notifyIcon2
@@ -287,13 +282,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JRemoval.Properties.Resources.Close_Light;
-            this.pictureBox1.Location = new System.Drawing.Point(901, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(905, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             // 
             // Form1
             // 
@@ -340,8 +346,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
