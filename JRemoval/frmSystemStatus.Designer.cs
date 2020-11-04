@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnChangePCName = new MetroFramework.Controls.MetroButton();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
             // 
             // label1
@@ -53,6 +55,24 @@
             this.label2.Size = new System.Drawing.Size(233, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Base Operating System Installed: 0.0";
+            this.metroToolTip1.SetToolTip(this.label2, "If you are confused, this is the Version Number (os) Windows was installed with.");
+            // 
+            // btnChangePCName
+            // 
+            this.btnChangePCName.Location = new System.Drawing.Point(16, 506);
+            this.btnChangePCName.Name = "btnChangePCName";
+            this.btnChangePCName.Size = new System.Drawing.Size(112, 28);
+            this.btnChangePCName.TabIndex = 5;
+            this.btnChangePCName.Text = "Change PC Name";
+            this.btnChangePCName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnChangePCName.UseSelectable = true;
+            this.btnChangePCName.Click += new System.EventHandler(this.btnChangePCName_Click);
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // frmSystemStatus
             // 
@@ -60,12 +80,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(821, 546);
+            this.Controls.Add(this.btnChangePCName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSystemStatus";
             this.Text = "frmSystemStatus";
+            this.Load += new System.EventHandler(this.frmSystemStatus_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,5 +97,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroButton btnChangePCName;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
     }
 }

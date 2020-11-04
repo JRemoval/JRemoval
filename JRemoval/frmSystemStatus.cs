@@ -16,5 +16,23 @@ namespace JRemoval
         {
             InitializeComponent();
         }
+
+        private void btnChangePCName_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("control", "sysdm.cpl");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
+
+        }
+
+        private void frmSystemStatus_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

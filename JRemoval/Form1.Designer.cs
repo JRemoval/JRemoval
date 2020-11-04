@@ -34,7 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnChangePCName = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPowerPlans = new MetroFramework.Controls.MetroButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblBatteryPercent);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnChangePCName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnPowerPlans);
             this.panel1.Controls.Add(this.label2);
@@ -109,18 +107,6 @@
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Battery Percentage:";
-            // 
-            // btnChangePCName
-            // 
-            this.btnChangePCName.Location = new System.Drawing.Point(127, 617);
-            this.btnChangePCName.Name = "btnChangePCName";
-            this.btnChangePCName.Size = new System.Drawing.Size(108, 23);
-            this.btnChangePCName.TabIndex = 4;
-            this.btnChangePCName.Text = "Change PC Name";
-            this.btnChangePCName.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.btnChangePCName, "Change PC Name");
-            this.btnChangePCName.UseSelectable = true;
-            this.btnChangePCName.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // label3
             // 
@@ -209,6 +195,7 @@
             this.metroToolTip1.SetToolTip(this.tileSystemStatus, "System Status");
             this.tileSystemStatus.UseSelectable = true;
             this.tileSystemStatus.UseTileImage = true;
+            this.tileSystemStatus.Click += new System.EventHandler(this.tileSystemStatus_Click);
             // 
             // tileRemoveTelemetry
             // 
@@ -283,7 +270,7 @@
             this.toolStripSeparator2,
             this.quitJRemovalToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(181, 98);
+            this.metroContextMenu1.Size = new System.Drawing.Size(174, 76);
             // 
             // quitJRemovalToolStripMenuItem
             // 
@@ -341,7 +328,6 @@
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroButton btnPowerPlans;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroButton btnChangePCName;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
         private MetroFramework.Controls.MetroTile tileCleanupComputer;
         private MetroFramework.Controls.MetroTile tileRemoveTelemetry;

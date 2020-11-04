@@ -46,6 +46,12 @@ namespace JRemoval
 
         }
 
+        private void tileSystemStatus_Click(object sender, EventArgs e)
+        {
+            var SystemStatus = new frmSystemStatus();
+            SystemStatus.Show();
+        }
+
         // Sidebar Runs Start
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -128,7 +134,8 @@ namespace JRemoval
         }
 
       
-                    // Thank you wpf man
+
+        // Thank you wpf man
 
     }
 
