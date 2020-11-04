@@ -65,7 +65,7 @@
             // metroRadioButton2
             // 
             this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(28, 170);
+            this.metroRadioButton2.Location = new System.Drawing.Point(74, 149);
             this.metroRadioButton2.Name = "metroRadioButton2";
             this.metroRadioButton2.Size = new System.Drawing.Size(39, 15);
             this.metroRadioButton2.TabIndex = 5;
@@ -77,13 +77,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12.25F, System.Drawing.FontStyle.Italic);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Italic);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(13, 99);
+            this.label2.Location = new System.Drawing.Point(13, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(583, 23);
+            this.label2.Size = new System.Drawing.Size(278, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Do you want JRemoval to hide in the tray when the application closes?";
+            this.label2.Text = "Hide JRemoval to tray when app closes?";
             // 
             // pictureBox1
             // 

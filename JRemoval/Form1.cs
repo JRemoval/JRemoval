@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using ezPC;
+using ezPC.Logging;
 using System.Management;
 using JRemoval.Properties;
 using Microsoft.Win32;
@@ -53,7 +54,8 @@ namespace JRemoval
         }
         private void metroTile2_Click(object sender, EventArgs e)
         {
-
+            Logger.Log("Test");
+           
         }
 
         private void tileSystemStatus_Click(object sender, EventArgs e)
