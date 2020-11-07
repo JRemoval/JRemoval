@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.divider1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,13 +58,6 @@
             this.quitJRemovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.divider1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.metroContextMenu1.SuspendLayout();
@@ -85,6 +85,86 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 643);
             this.panel1.TabIndex = 0;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(6, 320);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(110, 28);
+            this.metroButton2.TabIndex = 16;
+            this.metroButton2.Text = "Defragment";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.metroButton2, "Go to Power Configuration");
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(136, 320);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(110, 28);
+            this.metroButton1.TabIndex = 15;
+            this.metroButton1.Text = "Disk Cleanup";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.metroButton1, "Go to Power Configuration");
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(64, 122);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Storage && Disk";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(3, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(243, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "-----------------------------------------------";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(88, 368);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Battery";
+            // 
+            // divider1
+            // 
+            this.divider1.AutoSize = true;
+            this.divider1.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divider1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.divider1.Location = new System.Drawing.Point(4, 351);
+            this.divider1.Name = "divider1";
+            this.divider1.Size = new System.Drawing.Size(243, 17);
+            this.divider1.TabIndex = 11;
+            this.divider1.Text = "-----------------------------------------------";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.25F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(3, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Disk Size on C:\r\n";
+            this.metroToolTip1.SetToolTip(this.label5, "\r\n");
             // 
             // pictureBox2
             // 
@@ -309,86 +389,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.25F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(3, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 19);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Disk Size on C:\r\n";
-            this.metroToolTip1.SetToolTip(this.label5, "\r\n");
-            // 
-            // divider1
-            // 
-            this.divider1.AutoSize = true;
-            this.divider1.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divider1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.divider1.Location = new System.Drawing.Point(4, 351);
-            this.divider1.Name = "divider1";
-            this.divider1.Size = new System.Drawing.Size(243, 17);
-            this.divider1.TabIndex = 11;
-            this.divider1.Text = "-----------------------------------------------";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(88, 368);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Battery";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(3, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(243, 17);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "-----------------------------------------------";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(64, 122);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Storage && Disk";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(120, 320);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(110, 28);
-            this.metroButton1.TabIndex = 15;
-            this.metroButton1.Text = "Disk Cleanup";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.metroButton1, "Go to Power Configuration");
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(7, 320);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(110, 28);
-            this.metroButton2.TabIndex = 16;
-            this.metroButton2.Text = "Defrag";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.metroButton2, "Go to Power Configuration");
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
             // Form1
             // 
