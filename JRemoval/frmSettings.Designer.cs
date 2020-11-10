@@ -52,7 +52,7 @@
             // 
             this.metroRadioButton1.AutoSize = true;
             this.metroRadioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.metroRadioButton1.Location = new System.Drawing.Point(28, 149);
+            this.metroRadioButton1.Location = new System.Drawing.Point(337, 70);
             this.metroRadioButton1.Name = "metroRadioButton1";
             this.metroRadioButton1.Size = new System.Drawing.Size(40, 15);
             this.metroRadioButton1.Style = MetroFramework.MetroColorStyle.Yellow;
@@ -65,7 +65,7 @@
             // metroRadioButton2
             // 
             this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(74, 149);
+            this.metroRadioButton2.Location = new System.Drawing.Point(486, 70);
             this.metroRadioButton2.Name = "metroRadioButton2";
             this.metroRadioButton2.Size = new System.Drawing.Size(39, 15);
             this.metroRadioButton2.TabIndex = 5;
@@ -79,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.25F, System.Drawing.FontStyle.Italic);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(13, 116);
+            this.label2.Location = new System.Drawing.Point(298, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(278, 20);
             this.label2.TabIndex = 6;
