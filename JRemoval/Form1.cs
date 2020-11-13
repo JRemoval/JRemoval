@@ -36,15 +36,7 @@ namespace JRemoval
                 notifyIcon2.ShowBalloonTip(1000);
             }
 
-            // List all disk space
-            DriveInfo[] allDrives = DriveInfo.GetDrives();
-
-            foreach (DriveInfo d in allDrives)
-            {
-                Console.WriteLine(d.AvailableFreeSpace);
-               
-                label5.Text = "Free Space on C: " + d.AvailableFreeSpace.ToString("N") + "B";
-            }
+   
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -115,7 +107,7 @@ namespace JRemoval
         private void lblBatteryPercent_Click(object sender, EventArgs e)
         {
         }
-        // Sidebar Runs End
+  
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -124,7 +116,7 @@ namespace JRemoval
             Settings.Show();
         }
 
-        //Code to hide to tray start
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.RunInBackground == true)
@@ -145,25 +137,7 @@ namespace JRemoval
         }
 
         //Code to hide to tray end
-                             // Thank you wpf man
-        internal static class Program
-        {
-            [STAThread]
-            private static void Main2()
-            {
-                if (Environment.OSVersion.Version.Major >= 6)
-                    SetProcessDPIAware();
-
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
-            }
-
-            [DllImport("user32.dll", SetLastError = true)]
-            private static extern bool SetProcessDPIAware();
-        }
-    
-        // Thank you wpf man
+     
 
     }
 
