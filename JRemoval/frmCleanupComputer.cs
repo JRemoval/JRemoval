@@ -89,7 +89,15 @@ namespace JRemoval
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            //not copied code
+            try
+            {
+                System.Diagnostics.Process.Start("cleanmgr");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

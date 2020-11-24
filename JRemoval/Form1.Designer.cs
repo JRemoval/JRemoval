@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblBatteryPercent = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnChangePCName = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPowerPlans = new MetroFramework.Controls.MetroButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,32 +46,59 @@
             this.tileRemoveTelemetry = new MetroFramework.Controls.MetroTile();
             this.tileCleanupComputer = new MetroFramework.Controls.MetroTile();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.checkForUpdatesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.quitJRemovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.metroContextMenu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.metroButton2);
+            this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblBatteryPercent);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnChangePCName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnPowerPlans);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 643);
+            this.panel1.Size = new System.Drawing.Size(250, 643);
             this.panel1.TabIndex = 0;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(7, 329);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(110, 28);
+            this.metroButton2.TabIndex = 16;
+            this.metroButton2.Text = "Defragment";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.metroButton2, "Go to Power Configuration");
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(7, 388);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(110, 28);
+            this.metroButton1.TabIndex = 15;
+            this.metroButton1.Text = "Disk Cleanup";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip1.SetToolTip(this.metroButton1, "Go to Power Configuration");
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // pictureBox2
             // 
@@ -90,7 +118,7 @@
             this.lblBatteryPercent.AutoSize = true;
             this.lblBatteryPercent.Font = new System.Drawing.Font("Microsoft YaHei", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblBatteryPercent.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 126);
+            this.lblBatteryPercent.Location = new System.Drawing.Point(139, 494);
             this.lblBatteryPercent.Name = "lblBatteryPercent";
             this.lblBatteryPercent.Size = new System.Drawing.Size(53, 19);
             this.lblBatteryPercent.TabIndex = 6;
@@ -102,40 +130,28 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(3, 125);
+            this.label4.Location = new System.Drawing.Point(3, 493);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Battery Percentage:";
-            // 
-            // btnChangePCName
-            // 
-            this.btnChangePCName.Location = new System.Drawing.Point(119, 617);
-            this.btnChangePCName.Name = "btnChangePCName";
-            this.btnChangePCName.Size = new System.Drawing.Size(108, 23);
-            this.btnChangePCName.TabIndex = 4;
-            this.btnChangePCName.Text = "Change PC Name";
-            this.btnChangePCName.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToolTip1.SetToolTip(this.btnChangePCName, "Change PC Name");
-            this.btnChangePCName.UseSelectable = true;
-            this.btnChangePCName.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(12, 529);
+            this.label3.Location = new System.Drawing.Point(3, 546);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 20);
+            this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Power Plans";
+            this.label3.Text = "Power Plans:";
             // 
             // btnPowerPlans
             // 
-            this.btnPowerPlans.Location = new System.Drawing.Point(146, 529);
+            this.btnPowerPlans.Location = new System.Drawing.Point(120, 546);
             this.btnPowerPlans.Name = "btnPowerPlans";
-            this.btnPowerPlans.Size = new System.Drawing.Size(75, 23);
+            this.btnPowerPlans.Size = new System.Drawing.Size(89, 23);
             this.btnPowerPlans.TabIndex = 2;
             this.btnPowerPlans.Text = "Go";
             this.btnPowerPlans.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -146,25 +162,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(4, 29);
+            this.label2.Location = new System.Drawing.Point(31, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 16);
+            this.label2.Size = new System.Drawing.Size(183, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "User Singed In: %username%";
+            this.metroToolTip1.SetToolTip(this.label2, "\r\n");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(31, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.Size = new System.Drawing.Size(178, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "My Computer at a glance...";
-            this.metroToolTip1.SetToolTip(this.label1, "My Computer at a Glance");
+            this.label1.Text = "My Computer at a glance";
             // 
             // metroToolTip1
             // 
@@ -175,7 +191,7 @@
             // tilePlaceholder
             // 
             this.tilePlaceholder.ActiveControl = null;
-            this.tilePlaceholder.Location = new System.Drawing.Point(595, 373);
+            this.tilePlaceholder.Location = new System.Drawing.Point(617, 373);
             this.tilePlaceholder.Name = "tilePlaceholder";
             this.tilePlaceholder.Size = new System.Drawing.Size(234, 240);
             this.tilePlaceholder.Style = MetroFramework.MetroColorStyle.Silver;
@@ -193,7 +209,7 @@
             // tileSystemStatus
             // 
             this.tileSystemStatus.ActiveControl = null;
-            this.tileSystemStatus.Location = new System.Drawing.Point(273, 373);
+            this.tileSystemStatus.Location = new System.Drawing.Point(303, 373);
             this.tileSystemStatus.Name = "tileSystemStatus";
             this.tileSystemStatus.Size = new System.Drawing.Size(234, 240);
             this.tileSystemStatus.Style = MetroFramework.MetroColorStyle.Silver;
@@ -207,11 +223,12 @@
             this.metroToolTip1.SetToolTip(this.tileSystemStatus, "System Status");
             this.tileSystemStatus.UseSelectable = true;
             this.tileSystemStatus.UseTileImage = true;
+            this.tileSystemStatus.Click += new System.EventHandler(this.tileSystemStatus_Click);
             // 
             // tileRemoveTelemetry
             // 
             this.tileRemoveTelemetry.ActiveControl = null;
-            this.tileRemoveTelemetry.Location = new System.Drawing.Point(595, 29);
+            this.tileRemoveTelemetry.Location = new System.Drawing.Point(617, 29);
             this.tileRemoveTelemetry.Name = "tileRemoveTelemetry";
             this.tileRemoveTelemetry.Size = new System.Drawing.Size(234, 240);
             this.tileRemoveTelemetry.Style = MetroFramework.MetroColorStyle.Silver;
@@ -229,7 +246,7 @@
             // tileCleanupComputer
             // 
             this.tileCleanupComputer.ActiveControl = null;
-            this.tileCleanupComputer.Location = new System.Drawing.Point(273, 29);
+            this.tileCleanupComputer.Location = new System.Drawing.Point(303, 29);
             this.tileCleanupComputer.Name = "tileCleanupComputer";
             this.tileCleanupComputer.Size = new System.Drawing.Size(234, 240);
             this.tileCleanupComputer.Style = MetroFramework.MetroColorStyle.Silver;
@@ -249,35 +266,47 @@
             // 
             this.notifyIcon1.BalloonTipText = "JRemoval will still be running in the background.";
             this.notifyIcon1.BalloonTipTitle = "Running In Background";
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.ContextMenuStrip = this.metroContextMenu1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "JRemoval\r\n";
             // 
-            // contextMenuStrip1
+            // metroContextMenu1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.closeToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 48);
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdatesToolStripMenuItem1,
+            this.creditsToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.quitJRemovalToolStripMenuItem});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.Size = new System.Drawing.Size(174, 76);
             // 
-            // openToolStripMenuItem
+            // checkForUpdatesToolStripMenuItem1
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.checkForUpdatesToolStripMenuItem1.Name = "checkForUpdatesToolStripMenuItem1";
+            this.checkForUpdatesToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.checkForUpdatesToolStripMenuItem1.Text = "Check For Updates";
             // 
-            // closeToolStripMenuItem
+            // creditsToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.creditsToolStripMenuItem.Text = "Credits";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            // 
+            // quitJRemovalToolStripMenuItem
+            // 
+            this.quitJRemovalToolStripMenuItem.Name = "quitJRemovalToolStripMenuItem";
+            this.quitJRemovalToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.quitJRemovalToolStripMenuItem.Text = "Quit JRemoval";
+            this.quitJRemovalToolStripMenuItem.Click += new System.EventHandler(this.quitJRemovalToolStripMenuItem_Click);
             // 
             // notifyIcon2
             // 
-            this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             this.notifyIcon2.BalloonTipText = "Your computer battery is running low, it is highly recommended that you charge it" +
     ". ";
             this.notifyIcon2.BalloonTipTitle = "Battery Running Low";
@@ -287,9 +316,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JRemoval.Properties.Resources.Close_Light;
-            this.pictureBox1.Location = new System.Drawing.Point(901, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(905, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -314,7 +343,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.metroContextMenu1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -327,7 +356,6 @@
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroButton btnPowerPlans;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroButton btnChangePCName;
         private MetroFramework.Components.MetroToolTip metroToolTip1;
         private MetroFramework.Controls.MetroTile tileCleanupComputer;
         private MetroFramework.Controls.MetroTile tileRemoveTelemetry;
@@ -339,9 +367,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem quitJRemovalToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
 

@@ -15,7 +15,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="ver" Type="System.String" Scope="User">
-      <Value Profile="(Default)">v0.1.0</Value>
+      <Value Profile="(Default)">v0.1.1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

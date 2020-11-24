@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,24 @@ namespace JRemoval
         {
             InitializeComponent();
         }
+
+        private void btnChangePCName_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("control", "sysdm.cpl");
+            }
+            catch
+            {
+                MessageBox.Show("An unknown error has occurred.");
+            }
+
+        }
+
+        private void frmSystemStatus_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
